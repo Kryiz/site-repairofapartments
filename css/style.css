@@ -1996,7 +1996,6 @@ p {
     .footer__item:first-child {flex: 0 0 30%;}
     .footer__item:last-child {flex: 0 0 20%;}
     .advantage__body {flex-wrap: wrap; justify-content: center; gap: 20px;}
-
 }
 @media (max-width: 411px) {
     .offer, .exemples, .stock, .desc, .advantage, .benefits,
@@ -2040,5 +2039,4 @@ p {
     .footer__bottom {flex-direction: column; gap: 20px;}
     .footer__social {display: flex;}
     .footer__item:nth-child(3) {text-align: center;}
-
 }
