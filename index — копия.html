@@ -105,71 +105,71 @@
                         </div>
                     </div>
                     <div class="header__calc">
-                        <form class="header__forms-up" name="Sum">
+                        <div class="header__forms-up">
                             <div class="header__calc-title">РАССЧИТАЙТЕ стоимость ремонта</div>
                             <p class="header__form-title">Вид ремонта:</p>
-                            <div class="header__form" action="" method="post">
+                            <form class="header__form" action="" method="post">
                                 <div class="header__form-radio form-repair">
-                                    <input class="header__radio js-calc" type="radio" name="repair" id="radio-1" value="repair1"
-                                        data-price="12000">
+                                    <input class="header__radio" type="radio" name="repair" id="radio-1" value="repair1"
+                                        data-price="12000" onchange="repairChecked(this)">
                                     <label class="header__radio-label" for="radio-1">Классический</label>
                                 </div>
                                 <div class="header__form-radio">
-                                    <input class="header__radio js-calc" type="radio" name="repair" id="radio-2" value="repair2"
-                                        data-price="21000">
+                                    <input class="header__radio" type="radio" name="repair" id="radio-2" value="repair2"
+                                        data-price="21000" onchange="repairChecked(this)">
                                     <label class="header__radio-label" for="radio-2">Капитальный</label>
                                 </div>
                                 <div class="header__form-radio">
-                                    <input class="header__radio js-calc" type="radio" name="repair" id="radio-3" value="repair3"
-                                        data-price="27500">
+                                    <input class="header__radio" type="radio" name="repair" id="radio-3" value="repair3"
+                                        data-price="27500" onchange="repairChecked(this)">
                                     <label class="header__radio-label" for="radio-3">Под ключ</label>
                                 </div>
                                 <div class="header__form-radio">
-                                    <input class="header__radio js-calc" type="radio" name="repair" id="radio-4" value="repair4"
-                                        data-price="31400">
+                                    <input class="header__radio" type="radio" name="repair" id="radio-4" value="repair4"
+                                        data-price="31400" onchange="repairChecked(this)">
                                     <label class="header__radio-label" for="radio-4">Дизайнерский</label>
                                 </div>
-                            </div>
+                            </form>
                             <hr class="hr-line">
                             <p class="header__form-title">Тип вашей недвижимости:</p>
-                            <div class="header__form" action="" method="post">
+                            <form class="header__form" action="" method="post">
                                 <div class="header__form-radio">
-                                    <input class="js-calc" type="radio" name="house" data-price="6000">
+                                    <input type="radio" name="house" id="" data-p="6000" onchange="repairChecked(this)">
                                     <label for="radio">Новостройка</label>
                                 </div>
                                 <div class="header__form-radio">
-                                    <input class="js-calc" type="radio" name="house" data-price="8000">
+                                    <input type="radio" name="house" id="" data-p="8000" onchange="repairChecked(this)">
                                     <label for="radio">Вторичное жилье</label>
                                 </div>
-                            </div>
+                            </form>
                             <hr class="hr-line">
                             <p class="header__form-title">Количество комнат:</p>
-                            <div class="header__form" action="" method="post">
+                            <form class="header__form" action="" method="post">
                                 <div class="header__form-radio form-room">
-                                    <input class="js-calc" type="radio" name="room" data-price="8000">
+                                    <input type="radio" name="room" id="" data-e="8000" onchange="repairChecked(this)">
                                     <label for="radio">1</label>
                                 </div>
                                 <div class="header__form-radio form-room">
-                                    <input class="js-calc" type="radio" name="room" data-price="16000">
+                                    <input type="radio" name="room" id="" data-e="16000" onchange="repairChecked(this)">
                                     <label for="radio">2</label>
                                 </div>
                                 <div class="header__form-radio form-room">
-                                    <input class="js-calc" type="radio" name="room" data-price="24000">
+                                    <input type="radio" name="room" id="" data-e="24000" onchange="repairChecked(this)">
                                     <label for="radio">3</label>
                                 </div>
                                 <div class="header__form-radio form-room">
-                                    <input class="js-calc" type="radio" name="room" data-price="30000">
+                                    <input type="radio" name="room" id="" data-e="30000" onchange="repairChecked(this)">
                                     <label for="radio">4</label>
                                 </div>
-                            </div>
+                            </form>
                             <hr class="hr-line">
                             <p class="header__form-title">Площадь, м2:</p>
-                            <div class="header__form-range">
-                                <input class="js-calc" type="range" name="headerRange" id="headerRange" min="0" max="100" step="1"
-                                   data-price="5" oninput='fillRange();'>
+                            <form class="header__form-range">
+                                <input type="range" name="headerRange" id="headerRange" min="0" max="100" step="1"
+                                    oninput='fillRange();'>
                                 <label for="range" id="myRange">35</label>
-                            </div>
-                        </form>
+                            </form>
+                        </div>
                         <div class="header__form-sum">
                             <p>Срок ремонта:<br>
                                 <b>до 34 дней</b>

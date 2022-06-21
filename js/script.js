@@ -1,19 +1,15 @@
 'use strict';
 
-//====================== Calc, at work!
-var priceRepair;
-var priceHouse;
-var priceRoom;
-function repairChecked(e) {
-    var priceRepair = e.getAttribute("data-price");
-    var priceHouse = e.getAttribute("data-p");
-    var priceRoom = e.getAttribute("data-e");
+//====================== Calc
+let form = document.forms.Sum
+form.onchange = () => {
+    let arr = [...form.querySelectorAll('.js-calc:checked')].map(e => +e.dataset.price),
+        total = arr.length ? arr.reduce((acc, e) => acc += e) : 0,
+        range = document.getElementById('headerRange').value,
+        sum = 0;
+    sum += +total + +(range * 200);
 
-    var result = priceRepair + priceHouse + priceRoom;
-
-    // var result = +(e.getAttribute("data-price")) + +(e.getAttribute("data-p")) + +(e.getAttribute("data-e"));
-
-    document.getElementById('result').innerHTML = (result + ' р.');
+    document.getElementById('result').innerHTML = `<span>${sum} р.</span>`
 }
 
 //====================== fill and result Range
